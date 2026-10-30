@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
+
+/* WELCOME SCREEN */
+
+.Welcome-Screen {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: black;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+}
+
+/* WELCOME TEXT */
+
+.welcome-text {
+  color: red;
+
+  font-family: "Carrois Gothic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: clamp(24px, 5vw, 64px);
+
+  text-align: center;
+  padding: 0 15px;
+  margin: 0;
+
+  animation: zoomIn 4s ease-out forwards;
+}
+
+/* WELCOME ANIMATION */
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* LOGIN PAGE */
+
+.login-page {
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* LOGIN BOX */
+
+.login-box {
+  background-color: white;
+
+  width: 380px;
+  max-width: 90%;
+  padding: 40px;
+
+  border-radius: 10px;
+  text-align: center;
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* FITFORGE HEADING */
+
+.login-box h1 {
+  color: brown;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+/* LOGIN HEADING */
+
+.login-box h2 {
+  color: black;
+  margin-bottom: 25px;
+}
+
+/* INPUT FIELDS */
+
+.login-box input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  font-size: 15px;
+}
+
+/* LOGIN BUTTON */
+
+.login-box button {
+  width: 100%;
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  color: white;
+  background-color: green;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* BUTTON HOVER */
+
+.login-box button:hover {
+  background-color: yellowgreen;
+}
+
+/* REGISTER MESSAGE */
+
+.login-box p {
+  color: blue;
+  margin-top: 20px;
+}
+
+/* REGISTER LINK */
+
+.login-box a {
+  color: red;
+}

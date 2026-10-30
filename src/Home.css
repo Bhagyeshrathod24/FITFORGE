@@ -1,0 +1,171 @@
+.home-page {
+    min-height: 100vh;
+    background: rgba(116, 194, 198, 0.533);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.feature-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.feature-section h2 {
+    color: darkred;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.feature-card h3 {
+    color: blue;
+}
+
+.feature-card p {
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+
+.membership-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.membership-section h2 {
+    color: darkred;
+}
+
+
+.membership-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.membership-card {
+    width: 300px;
+    background: #3478;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.membership-card h3 {
+    color: blue;
+}
+
+.membership-card p {
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.membership-card button {
+    padding: 14px 10px;
+    color: white;
+    background: aqua;
+    border-radius: 5px;
+}
+
+.membership-card button:hover {
+    background: green;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: black;
+}
+
+.navbar h1 {
+    color: red;
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ccc;
+    font-size: 17px;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+
+
+
+
+
+.hero-section {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px
+}
+
+
+
+
+.hero-section h1 {
+    color: red;
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.hero-section p {
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.hero-section button {
+    padding: 14px 10px;
+    color: white;
+    background: aqua;
+    border-radius: 5px;
+}
+
+.hero-section button:hover {
+    background: green;
+}
+
+
+
+@media (max-width:700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
