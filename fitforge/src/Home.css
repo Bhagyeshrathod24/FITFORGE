@@ -5,16 +5,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.feature-section {
+.feacture-section {
     padding: 60px 20px;
     text-align: center;
 }
 
-.feature-section h2 {
+.feacture-section h2 {
     color: darkred;
 }
 
-.feature-cards {
+.feacture-cards {
     display: flex;
     gap: 25px;
     justify-content: center;
@@ -22,20 +22,22 @@
     flex-wrap: wrap;
 }
 
-.feature-card {
+.feacture-card {
     background: #222;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    margin: 10px 10px;
     border-radius: 10px;
 }
 
-.feature-card h3 {
-    color: blue;
+.feacture-card h3 {
+    color: yellow;
 }
 
-.feature-card p {
+.feacture-card p {
     font-size: 18px;
     padding: 20px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -63,19 +65,21 @@
     color: white;
     padding: 20px;
     border-radius: 10px;
+
 }
 
 .membership-card h3 {
-    color: blue;
+    color: rgba(248, 135, 7, 0.855);
 }
 
 .membership-card p {
     font-size: 18px;
-    padding: 20px 0;
+    padding: 15px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .membership-card button {
-    padding: 14px 10px;
+    padding: 15px 15px;
     color: white;
     background: aqua;
     border-radius: 5px;
@@ -119,12 +123,15 @@
 
 .hero-section {
     min-height: 400px;
+
+    background-image: url(./gym.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px 20px
+    padding: 30px 20px;
+    background-size: cover;
 }
 
 

@@ -1,6 +1,6 @@
 import "./Home.css";
 
-function Home() {
+function Home({ onExplore }) {
     return (
         <div className="home-page">
             <nav className="navbar">
@@ -15,6 +15,7 @@ function Home() {
                     <a href="#profile">Profile</a>
                     <a href="#pricing">Pricing</a>
 
+
                 </div>
 
             </nav>
@@ -23,7 +24,7 @@ function Home() {
 
                 <h1>WELCOME TO FITFORGE</h1>
                 <p>Start your fitness journey now , build crazzyyy physique with us and stay healthy...</p>
-                <button>Explore Workout</button>
+                <button onClick={onExplore}>Explore Workout</button>
 
             </section>
 
@@ -31,7 +32,7 @@ function Home() {
                 <h2>WHY CHOOSE FITFORGE</h2>
 
                 <div className="feacture-cards">
-                    <div className="feature-card">
+                    <div className="feacture-card">
                         <h3>WORKOUT PLAN</h3>
                         <p>Explore your workout if u want to build strength do compound moment and if u want to increase your muscle mass do hypertrophy moment</p>
                     </div>
@@ -48,7 +49,7 @@ function Home() {
 
             <section className="membership-section" id="pricing">
                 <h2>CHOOSE YOUR PLAN</h2>
-                <div className="membership-cardS">
+                <div className="membership-cards">
                     <div className="membership-card">
                         <h3>FREE</h3>
                         <p>BASIC WORKOUT PLAN</p>

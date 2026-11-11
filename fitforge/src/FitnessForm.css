@@ -1,0 +1,89 @@
+.fitness-page {
+    color: red;
+    min-height: 100vh;
+    align-items: center;
+    background: lightgrey;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.fitness-box {
+    background: #daf206;
+    width: 500px;
+    max-width: 100%;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.50);
+}
+
+.fitness-box h1 {
+    color: rgb(61, 20, 145);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    margin-bottom: 25px;
+
+}
+
+.fitness-box h2 {
+    color: rgb(27, 16, 16);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.fitness-box select,
+.fitness-box input[type="number"] {
+
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+
+
+}
+
+.fitness-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.fitness-box button {
+    font-size: 16px;
+    color: white;
+    padding: 14px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.fitness-box button:hover {
+    background: green;
+}
+
+@media(max-width:600px) {
+    .fitness-box {
+        padding: 20px 15px;
+    }
+
+    .fitness-box h1 {
+        font-size: 20px;
+    }
+
+    .fitness-box h2 {
+        font-size: 15px;
+    }
+
+    .fitness-box button {
+        font-size: 10px;
+        margin-bottom: 15px;
+        padding: 12px;
+    }
+
+}

@@ -1,0 +1,70 @@
+.registration-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #edeef4;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.registration-box h3 {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.registration-box {
+    border-radius: 12px;
+    text-align: center;
+    width: 480px;
+    padding: 20px;
+    background: #c5e88e;
+    box-shadow: 0 0 15px rgba(250, 0, 0, 0.3);
+    align-items: center;
+    text-align: center;
+    margin: 0px 60px;
+
+}
+
+.registration-box input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: #292929;
+    border: 1px solid #555;
+}
+
+.registration-box input:focus {
+    background-color: #292929;
+    color: white;
+    outline: 2px solid red;
+}
+
+.registration-box button {
+    width: 100%;
+    padding: 19px;
+    margin: 10px 0;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.registration-box button:hover {
+    background: green;
+}
+
+.registration-box p {
+    color: `rgb(241, 247, 245);
+    margin: 19px;
+}
+
+.registration-box span {
+    color: blue;
+    cursor: pointer;
+}

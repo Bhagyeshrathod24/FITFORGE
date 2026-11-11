@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
 
 /* WELCOME SCREEN */
+#root {
+  width: 100px;
+  min-width: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
 
 .Welcome-Screen {
   position: fixed;
@@ -140,6 +147,7 @@
 
 /* REGISTER LINK */
 
-.login-box a {
+.login-box span {
   color: red;
+  cursor: pointer;
 }
