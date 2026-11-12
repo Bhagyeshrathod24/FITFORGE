@@ -16,9 +16,9 @@ function Registration({ onLogin, onRegistration }) {
             return;
         }
         onRegistration({
-            name,
-            email,
-            pwd
+            name: name,
+            email: email,
+            password: pwd
         });
     };
 
@@ -30,25 +30,25 @@ function Registration({ onLogin, onRegistration }) {
                 <input type="text"
                     value={name}
                     placeholder="ENTER YOUR NAME"
-                    onDurationChange={(e) => setname(e.target.value)}
+                    onChange={(e) => setname(e.target.value)}
                     required />
 
                 <input type="email"
                     value={email}
                     placeholder="ENTER YOUR EMAIL"
-                    onDurationChange={(e) => setemail(e.target.value)}
+                    onChange={(e) => setemail(e.target.value)}
                     required />
 
                 <input type="password"
                     value={pwd}
                     placeholder="ENTER YOUR PASSWORD"
-                    onDurationChange={(e) => setpwd(e.target.value)}
+                    onChange={(e) => setpwd(e.target.value)}
                     required />
 
                 <input type="password"
                     value={confirmpwd}
                     placeholder="CONFIRM PASSWORD"
-                    onDurationChange={(e) => setconfirmpwd(e.target.value)}
+                    onChange={(e) => setconfirmpwd(e.target.value)}
                     required />
 
                 <button type="submit">REGISTER</button>

@@ -72,9 +72,45 @@ function App() {
     setPage("login");
   }
 
-  const handleRegister = (data) => {
-    console.log("Registration page detailes", data);
-  }
+  const handleRegister = async (userdata) => {
+    console.log("Registration page detailes", userdata);
+
+    try {
+      const response = await fetch("http://localhost:8080/api/users/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify(userdata)
+        }
+      );
+
+      const responsetext = await response.text();
+
+      let data;
+      try {
+        data = responsetext ? JSON.parse(responsetext) : {};
+      }
+      catch {
+        data = { message: responsetext };
+      }
+
+      if (!response.ok) {
+        alert(data.message || "Registration failed");
+        return;
+      }
+      alert(data.message || "Registartion Successsful");
+      setIsLoggedIn(true);
+      setPage("home");
+    }
+
+    catch (error) {
+      console.error("Registration Error", error);
+      alert("cannot connect to backkend please check your server...");
+    }
+  };
   return (
     <>
       {isLoggedIn ? (page === "home" ? (<Home onExplore={() => setPage("fitness")} />) : (<FitnessForm onBack={() => setPage("home")}
@@ -82,7 +118,7 @@ function App() {
       ) :
         showLogin ? (
           page === "registration" ? (<Registration onLogin={handleLoginPage}
-            onRegistration={handleRegisterPage} />) :
+            onRegistration={handleRegister} />) :
             (<div className="login-page">
               <div className="login-box">
                 <h1>LOGIN</h1>
