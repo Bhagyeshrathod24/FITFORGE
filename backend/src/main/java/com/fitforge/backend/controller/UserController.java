@@ -2,8 +2,11 @@ package com.fitforge.backend.controller;
 
 import com.fitforge.backend.model.User;
 import com.fitforge.backend.service.UserService;
+import com.fitforge.backend.dto.LoginRequest;
 import com.fitforge.backend.dto.RegisterRequest;
 import com.fitforge.backend.dto.RegisterResponse;
+
+import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +38,16 @@ public class UserController {
                     .body(e.getMessage());
         }
 
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> userLogin(@RequestBody LoginRequest request) {
+        try {
+            userservice.userLogin(request);
+            return ResponseEntity.ok(Map.of("message", "Login successful"));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("message", e.getMessage()));
+        }
     }
 
 }

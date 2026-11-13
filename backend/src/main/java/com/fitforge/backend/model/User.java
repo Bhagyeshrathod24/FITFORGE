@@ -40,11 +40,11 @@ public class User {
         this.email = email;
     }
 
-    public String getPasswordhash() {
+    public String getPasswordHash() {
         return passwordHash;
     }
 
-    public void setPasswordhash(String passwordHash) {
+    public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
     }
 

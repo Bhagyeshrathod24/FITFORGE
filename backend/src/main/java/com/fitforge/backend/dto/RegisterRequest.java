@@ -3,7 +3,7 @@ package com.fitforge.backend.dto;
 public class RegisterRequest {
     private String name;
     private String email;
-    private String pwd;
+    private String password;
 
     public RegisterRequest() {
 
@@ -25,12 +25,12 @@ public class RegisterRequest {
         this.email = email;
     }
 
-    public String getPwd() {
-        return pwd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
+    public void setPwd(String password) {
+        this.password = password;
     }
 
 }

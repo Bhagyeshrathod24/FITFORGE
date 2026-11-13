@@ -9,11 +9,53 @@ function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
-    setIsLoggedIn(true);
-  };
 
+    try {
+      const response = await fetch("http://localhost:8080/api/users/login",
+        {
+          method: "POST",
+          headers:
+          {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            email: loginEmail,
+            password: loginpwd
+          }
+          )
+
+        }
+      );
+
+      const responselogin = await response.text();
+      let responsedata;
+
+      try {
+        responsedata = responselogin ? JSON.parse(responselogin) : {};
+      }
+      catch {
+        responsedata = { message: responselogin };
+      }
+
+      if (!response.ok) {
+        alert(responsedata.message || "Invalid email or password");
+        return;
+      }
+      alert(responsedata.message || "Login Successful");
+
+      setIsLoggedIn(true);
+      setPage("home");
+
+
+
+    }
+    catch (error) {
+      console.error("Error", error);
+      alert("Cannot connect to backend please check your server.");
+    }
+  };
   const [showLogin, setShowLogin] = useState(false);
 
   useEffect(() => {
@@ -24,7 +66,8 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginpwd, setloginPwd] = useState("");
 
   const [page, setPage] = useState("home");
   /*const handleSubmit = (answer) => {
@@ -127,11 +170,15 @@ function App() {
                 <form onSubmit={handleLogin}>
 
                   <input type="email"
+                    value={loginEmail}
                     placeholder="Enter your email"
+                    onChange={(e) => setLoginEmail(e.target.value)}
                     required />
 
                   <input type="password"
+                    value={loginpwd}
                     placeholder="Enter your password"
+                    onChange={(e) => setloginPwd(e.target.value)}
                     required />
 
                   <button type="Submit">LOGIN</button>
